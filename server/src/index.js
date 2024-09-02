@@ -27,5 +27,9 @@ app.use("/recipes" ,recipesrouter)
 
 mongoose.connect("mongodb+srv://dayavelusamy:daya444@backend.emq23a0.mongodb.net/backend?retryWrites=true&w=majority&appName=backend")
 
-app.listen(3001 , ()=> console.log ("server started")) 
+const PORT = process.env.PORT || 3002;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
